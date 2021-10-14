@@ -1,0 +1,174 @@
+INSERT INTO smartboard_prod.franchise_milestones (
+                                            franchise_id,
+                                            milestone_id
+                                        )(
+                                            SELECT
+                                                c.franchise_id+40,b.id
+                                            FROM
+                                                milestones AS a,
+                                                smartboard_prod.milestones AS b,
+                                                franchise_accounts AS c
+                                            WHERE
+                                                a.id = b.old_id
+                                            AND c.account_id = a.account_id
+                                            AND a.account_id = 159
+                                        )
+INSERT INTO smartboard_prod.paths (name,is_lead_path,account_id,is_active,is_default,parent_id,is_used)(
+                                    SELECT
+                                        CONCAT(
+                                            b.primary_customer_name,
+                                            ',',
+                                            b.id
+                                        ) AS NAME,
+                                        1 AS is_lead_path,
+                                        b.account_id,
+                                        1,
+                                        1,
+                                        0,
+                                        0
+                                    FROM
+                                        leads AS a,
+                                        smartboard_prod.leads AS b
+                                    WHERE
+                                        a.id = b.old_id
+                                    AND a.account_id = 159
+                                )
+INSERT INTO smartboard_prod.franchise_milestones (
+                                            franchise_id,
+                                            milestone_id
+                                        )(
+                                            SELECT
+                                                c.franchise_id+40,b.id
+                                            FROM
+                                                milestones AS a,
+                                                smartboard_prod.milestones AS b,
+                                                franchise_accounts AS c
+                                            WHERE
+                                                a.id = b.old_id
+                                            AND c.account_id = a.account_id
+                                            AND a.account_id = 159
+                                        )
+INSERT INTO smartboard_prod.paths (name,is_lead_path,account_id,is_active,is_default,parent_id,is_used)(
+                                    SELECT
+                                        CONCAT(
+                                            b.primary_customer_name,
+                                            ',',
+                                            b.id
+                                        ) AS NAME,
+                                        1 AS is_lead_path,
+                                        b.account_id,
+                                        1,
+                                        1,
+                                        0,
+                                        0
+                                    FROM
+                                        leads AS a,
+                                        smartboard_prod.leads AS b
+                                    WHERE
+                                        a.id = b.old_id
+                                    AND a.account_id = 159
+                                )
+INSERT INTO smartboard_prod.path_items(milestone_id,path_id,`order`)(
+                                        SELECT
+                                            a.id AS milestone_id,
+                                            b.id AS path_id,a.`order`
+                                        FROM
+                                            smartboard_prod.milestones AS a
+                                        LEFT JOIN smartboard_prod.paths AS b ON b.account_id = a.account_id
+                                        INNER JOIN milestones AS c ON a.old_id = c.id
+                                        WHERE
+                                            c.account_id = 159
+                                      )
+INSERT INTO smartboard_prod.franchise_milestones (
+                                            franchise_id,
+                                            milestone_id
+                                        )(
+                                            SELECT
+                                                c.franchise_id+40,b.id
+                                            FROM
+                                                milestones AS a,
+                                                smartboard_prod.milestones AS b,
+                                                franchise_accounts AS c
+                                            WHERE
+                                                a.id = b.old_id
+                                            AND c.account_id = a.account_id
+                                            AND a.account_id = 159
+                                        )
+INSERT INTO smartboard_prod.paths (name,is_lead_path,account_id,is_active,is_default,parent_id,is_used)(
+                                    SELECT
+                                        CONCAT(
+                                            b.primary_customer_name,
+                                            ',',
+                                            b.id
+                                        ) AS NAME,
+                                        1 AS is_lead_path,
+                                        b.account_id,
+                                        1,
+                                        1,
+                                        0,
+                                        0
+                                    FROM
+                                        leads AS a,
+                                        smartboard_prod.leads AS b
+                                    WHERE
+                                        a.id = b.old_id
+                                    AND a.account_id = 159
+                                )
+INSERT INTO smartboard_prod.path_items(milestone_id,path_id,`order`)(
+                                        SELECT
+                                            a.id AS milestone_id,
+                                            b.id AS path_id,a.`order`
+                                        FROM
+                                            smartboard_prod.milestones AS a
+                                        LEFT JOIN smartboard_prod.paths AS b ON b.account_id = a.account_id
+                                        INNER JOIN milestones AS c ON a.old_id = c.id
+                                        WHERE
+                                            c.account_id = 159
+                                      )
+INSERT INTO smartboard_prod.franchise_milestones (
+                                            franchise_id,
+                                            milestone_id
+                                        )(
+                                            SELECT
+                                                c.franchise_id+1000,b.id
+                                            FROM
+                                                milestones AS a,
+                                                smartboard_prod.milestones AS b,
+                                                franchise_accounts AS c
+                                            WHERE
+                                                a.id = b.old_id
+                                            AND c.account_id = a.account_id
+                                            AND a.account_id = 159
+                                        )
+INSERT INTO smartboard_prod.paths (name,is_lead_path,account_id,is_active,is_default,parent_id,is_used)(
+                                    SELECT
+                                        CONCAT(
+                                            b.primary_customer_name,
+                                            ',',
+                                            b.id
+                                        ) AS NAME,
+                                        1 AS is_lead_path,
+                                        b.account_id,
+                                        1,
+                                        1,
+                                        0,
+                                        0
+                                    FROM
+                                        leads AS a,
+                                        smartboard_prod.leads AS b
+                                    WHERE
+                                        a.id = b.old_id
+                                    AND a.account_id = 159
+                                )
+INSERT INTO smartboard_prod.path_items(milestone_id,path_id,`order`)(
+                                        SELECT
+                                            a.id AS milestone_id,
+                                            b.id AS path_id,a.`order`
+                                        FROM
+                                            smartboard_prod.milestones AS a
+                                        LEFT JOIN smartboard_prod.paths AS b ON b.account_id = a.account_id
+                                        INNER JOIN milestones AS c ON a.old_id = c.id
+                                        WHERE
+                                            c.account_id = 159
+                                      )
+
